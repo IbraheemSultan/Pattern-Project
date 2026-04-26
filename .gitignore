@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Download artifacts
+*.crdownload
+
+# Trained model artifacts
+random_forest_model.pkl
+scaler.pkl
+pca.pkl
