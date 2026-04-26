@@ -5,14 +5,18 @@ paginate: true
 ---
 
 # Air Quality Classification Model
+
 ### Predicting Environmental Quality from Spatial and Observation Data
+
 **University:** EELU (Egyptian E-Learning University)
 
 **Under the Supervision of:**
+
 - **Dr.** Wafaa Sami
 - **Eng.** Shahd
 
 **Team Members:**
+
 1. Abdelazez Merzek Eid (ID: 2301980)
 2. Basma Yasser Anter Mohamed (ID: 2302152)
 3. Steven haroon bakheet (ID: 2302242)
@@ -30,6 +34,7 @@ Air pollution has severe implications for public health and climate change. Moni
 To build a robust Machine Learning pipeline that classifies air quality into binary outcomes ("Good" ✅ or "Bad" ❌) based on complex environmental, numerical, and spatial statistics.
 
 **Technologies Used:**
+
 - Python, Pandas, Scikit-Learn (Data & ML)
 - PCA, RobustScaler, SMOTE (Data Preprocessing)
 - Streamlit (Web UI)
@@ -42,6 +47,7 @@ To build a robust Machine Learning pipeline that classifies air quality into bin
 - **Data Size & Scale:** Approximately 500 MB in size, consisting of over 2 Million rows and records collected from various monitoring stations.
 
 **Key Features Extracted:**
+
 1. **Spatial Variables:** Latitude, Longitude (identifying the monitoring stations).
 2. **Temporal Variables:** Year, Sample Duration, Valid Day Count, Required Day Count.
 3. **Statistical Variables:** Observation Count, Completeness Indicator, Exception Data Count.
@@ -65,6 +71,7 @@ Complex environmental data requires significant transformation to train effectiv
 **Algorithm Chosen:** Random Forest Classifier (`random_forest_model.pkl`)
 
 **Why Random Forest?**
+
 - **Non-Linearity:** Excels in capturing complex relationships between geographical locations and specific pollution readings.
 - **Robustness:** Handles high-dimensional data (post-PCA) effectively without deep tuning.
 - **Ensemble Power:** By combining multiple decision trees, it strongly reduces the risk of overfitting and increases prediction accuracy on unseen data.
@@ -80,7 +87,7 @@ graph TD
     C --> D(PCA Transformation)
     D --> E(Train Random Forest)
     E --> F[Serialized Models: pkl]
-    
+
     G[Streamlit Web User] -->|Inputs Data| H(Apply Scaler & PCA)
     H -->|Predict| F
     F -->|Returns| I[Good / Bad Classification]
@@ -100,14 +107,17 @@ To make the AI accessible, we developed an interactive web interface:
 
 ## 7. Conclusion & Future Work
 
-**Conclusion:** 
+**Conclusion:**
 We successfully demonstrated an end-to-end Machine Learning ecosystem capable of digesting complex, multi-dimensional environmental data and outputting straightforward, actionable air quality assessments.
 
 **Future Enhancements:**
+
 1. **Live Data Integration:** Connect to real-time EPA APIs instead of static variables.
 2. **Multi-class Classification:** Predict exact Air Quality Index (AQI) brackets instead of pure binary (Good/Bad).
 3. **Geospatial Mapping:** Integrate dynamic Folium maps in Streamlit to visualize predictions geographically.
 
 ---
+
 # Thank You!
+
 ### Any Questions?
